@@ -1,0 +1,13 @@
+name: ${project.artifactId}
+main: ${project.groupId}.${project.artifactId}
+version: ${project.version}
+api-version: ${project.bukkitAPIVersion}
+
+author: ElgarL
+website: http://palmergames.com
+
+description: >
+    ${project.description}
+
+softdepend: []
+

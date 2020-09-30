@@ -1,0 +1,9 @@
+# Delay (in Seconds) before a regeneration starts.
+# (The time between the explosion and regeneration)
+
+delay: 10
+
+# Frequency of regeneration (in server ticks).
+# (How fast the regeneration runs)
+
+frequency: 5

@@ -1,0 +1,54 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+	
+  <groupId>com.palmergames.spigot.regen</groupId>
+  <artifactId>Regen</artifactId>
+  <version>0.0.1</version>
+  <description>Explosion management and regeneration</description>
+  
+  <properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<project.bukkitAPIVersion>1.16</project.bukkitAPIVersion>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<jar.finalName>${project.name}</jar.finalName>
+	</properties>
+	
+	<repositories>
+		<repository>
+			<id>spigot-repo</id>
+			<url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+		</repository>
+	</repositories>
+	
+	<dependencies>
+		<!--Bukkit/Spigot API -->
+		<dependency>
+			<groupId>org.spigotmc</groupId>
+			<artifactId>spigot-api</artifactId>
+			<version>1.16.3-R0.1-SNAPSHOT</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+	
+	<build>
+		<defaultGoal>clean package</defaultGoal>
+		<sourceDirectory>src</sourceDirectory>
+		<resources>
+			<!-- Include all resources -->
+			<resource>
+				<directory>resources</directory>
+				<filtering>true</filtering>
+				<includes>
+					<include>*.yml</include>
+					<include>*.txt</include>
+					<include>*.json</include>
+					<include>*.properties</include>
+				</includes>
+			</resource>
+		</resources>
+	</build>
+
+</project>
