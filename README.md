@@ -31,9 +31,11 @@ Then add as a dependency in your pom.xml
 ---
 
 In your onEnable() method add
->		final PluginManager pluginManager = getServer().getPluginManager();
->		if (pluginManager.getPlugin("Regen") != null)
->			pluginManager.registerEvents(new RegenPluginListener(), instance);  
+```java
+final PluginManager pluginManager = getServer().getPluginManager();
+if (pluginManager.getPlugin("Regen") != null)
+	pluginManager.registerEvents(new RegenPluginListener(), instance);
+```
 			
 This sample class can be used in your plugin to intercept Regen events and take control at a granular level.
         
