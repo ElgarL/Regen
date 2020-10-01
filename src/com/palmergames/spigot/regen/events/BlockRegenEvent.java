@@ -43,7 +43,9 @@ public class BlockRegenEvent extends Event implements Cancellable {
 	private final List<Block> blockList;
 
 	/**
+	 * Constructor for a new BlockList regen event.
 	 * 
+	 * @param blockList	a List of Blocks.
 	 */
 	public BlockRegenEvent(List<Block> blockList) {
 

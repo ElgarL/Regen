@@ -45,8 +45,8 @@ public class ExtendEntityArmorStand extends SerializedEntity {
 	/**
 	 * Constructor to create a ExtendEntityArmorStand from an Entity.
 	 * 
-	 * @param <T>	extends Entity
-	 * @param block	the Entity to store.
+	 * @param <T>		extends Entity
+	 * @param entity	the Entity to store.
 	 */
 	public <T extends Entity> ExtendEntityArmorStand (T entity) {
 

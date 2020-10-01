@@ -67,9 +67,8 @@ public class EntityUtils {
 	 * @param <Z>	a class which extends SerializedEntity
 	 * @param map	the map to process.
 	 * @return		a SerializedEntity extended class.
-	 * @throws IllegalArgumentException
 	 */
-	public static <Z extends SerializedEntity> Z deserializeByType (Map<?, ?> map) throws IllegalArgumentException {
+	public static <Z extends SerializedEntity> Z deserializeByType (Map<?, ?> map) {
 
 		EntityType type = EntityType.valueOf((String) map.get("type"));
 

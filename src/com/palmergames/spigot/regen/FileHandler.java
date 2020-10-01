@@ -52,7 +52,9 @@ public class FileHandler {
 	private FileConfiguration config;
 
 	/**
+	 * Constructor for the FileHandler.
 	 * 
+	 * @param plugin	Regen instance.
 	 */
 	public FileHandler(Regen plugin) {
 

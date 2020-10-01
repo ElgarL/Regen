@@ -74,7 +74,7 @@ public class BlockUtils {
 	 * @param <Z>	a class which extends SerializedBlock
 	 * @param map	the map to process.
 	 * @return		a SerializedBlock extended class.
-	 * @throws IllegalArgumentException
+	 * @throws IllegalArgumentException	thrown from createBlockData.
 	 */
 	public static <Z extends SerializedBlock> Z deserializeByType (Map<?, ?> map) throws IllegalArgumentException {
 

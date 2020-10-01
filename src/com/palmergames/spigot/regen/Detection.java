@@ -59,7 +59,9 @@ public class Detection implements Listener {
 	private FileHandler handler;
 
 	/**
+	 * Constructor for our Event Listener.
 	 * 
+	 * @param plugin	Regen instance.
 	 */
 	public Detection(Regen plugin) {
 
@@ -67,11 +69,9 @@ public class Detection implements Listener {
 		this.handler = this.plugin.getFileHandler();
 	}
 
-	/**
+	/*
 	 * Track ITEM_FRAME and PAINTING
 	 * destroyed in explosions.
-	 * 
-	 * @param event
 	 */
 	@EventHandler(priority = EventPriority.HIGHEST)
 	public void onHangingBreak(HangingBreakEvent event) {
@@ -91,11 +91,9 @@ public class Detection implements Listener {
 		parseEntity(event.getEntity());
 	}
 
-	/**
+	/*
 	 * Track ARMOR_STAND
 	 * destroyed in explosions.
-	 * 
-	 * @param event
 	 */
 	@EventHandler(priority = EventPriority.HIGHEST)
 	public void onEntityDamageByEntity(EntityDamageByEntityEvent event) {
@@ -114,10 +112,8 @@ public class Detection implements Listener {
 		parseEntity(event.getEntity());
 	}
 
-	/**
+	/*
 	 * All blocks destroyed in explosions.
-	 * 
-	 * @param event
 	 */
 	@EventHandler(priority = EventPriority.HIGHEST)
 	public void onEntityExplode(EntityExplodeEvent event) {
@@ -133,10 +129,8 @@ public class Detection implements Listener {
 		event.setYield(0);
 	}
 
-	/**
+	/*
 	 * All blocks destroyed in explosions.
-	 * 
-	 * @param event
 	 */
 	@EventHandler(priority = EventPriority.HIGHEST)
 	public void onBlockExplode(BlockExplodeEvent event) {
@@ -156,8 +150,8 @@ public class Detection implements Listener {
 	 * Process the following Entities for regeneration.
 	 * ITEM_FRAME, PAINTING,ARMOR_STAND.
 	 * 
-	 * @param <T>
-	 * @param entity
+	 * @param <T>		Entity Type.
+	 * @param entity	an Entity to parse.
 	 */
 	public <T extends Entity> void parseEntity(T entity) {
 
@@ -200,7 +194,7 @@ public class Detection implements Listener {
 	/**
 	 * Process all Blocks for regeneration.
 	 * 
-	 * @param blockList
+	 * @param blockList	a LIst of Blocks to parse.
 	 */
 	public void parseBlocks(List<Block> blockList) {
 

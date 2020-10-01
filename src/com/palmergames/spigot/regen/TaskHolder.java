@@ -51,7 +51,9 @@ public class TaskHolder {
 	private FileHandler handler;
 
 	/**
+	 * Constructor for the Asynchronous TaskHolder.
 	 * 
+	 * @param plugin	Regen instance.
 	 */
 	public TaskHolder(Regen plugin) {
 

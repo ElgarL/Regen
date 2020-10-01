@@ -1,39 +1,37 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-	
-  <groupId>com.palmergames.spigot.regen</groupId>
-  <artifactId>Regen</artifactId>
-  <version>0.0.1</version>
-  <description>Explosion management and regeneration</description>
-  
-  <properties>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.palmergames.spigot.regen</groupId>
+	<artifactId>Regen</artifactId>
+	<version>0.0.1</version>
+	<description>Explosion management and regeneration</description>
+
+	<properties>
 		<project.bukkitAPIVersion>1.16</project.bukkitAPIVersion>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<jar.finalName>${project.name}</jar.finalName>
 	</properties>
-	
+
 	<!-- For use with GitHub Package Registry -->
-    <!-- Requires repo write access, and proper local maven configuration -->
-    <!-- https://help.github.com/en/articles/about-github-package-registry -->
-    <distributionManagement>
-        <repository>
-            <id>github</id>
-            <name>GitHub Apache Maven Packages</name>
-            <url>https://maven.pkg.github.com/ElgarL/Regen</url>
-        </repository>
-    </distributionManagement>
-    
+	<!-- Requires repo write access, and proper local maven configuration -->
+	<!-- https://help.github.com/en/articles/about-github-package-registry -->
+	<distributionManagement>
+		<repository>
+			<id>github</id>
+			<name>GitHub Apache Maven Packages</name>
+			<url>https://maven.pkg.github.com/ElgarL/Regen</url>
+		</repository>
+	</distributionManagement>
+
 	<repositories>
 		<repository>
 			<id>spigot-repo</id>
 			<url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
 		</repository>
 	</repositories>
-	
+
 	<dependencies>
 		<!--Bukkit/Spigot API -->
 		<dependency>
@@ -43,10 +41,32 @@
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
-	
+
 	<build>
 		<defaultGoal>clean package</defaultGoal>
 		<sourceDirectory>src</sourceDirectory>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>3.2.0</version>
+				<executions>
+					<execution>
+						<id>attach-javadocs</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
 		<resources>
 			<!-- Include all resources -->
 			<resource>

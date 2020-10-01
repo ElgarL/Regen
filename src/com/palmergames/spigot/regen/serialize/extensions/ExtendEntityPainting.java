@@ -38,8 +38,8 @@ public class ExtendEntityPainting extends SerializedEntity {
 	/**
 	 * Constructor to create a ExtendEntityPainting from an Entity.
 	 * 
-	 * @param <T>	extends Entity
-	 * @param block	the Entity to store.
+	 * @param <T>		extends Entity
+	 * @param entity	the Entity to store.
 	 */
 	public <T extends Entity> ExtendEntityPainting(T entity) {
 

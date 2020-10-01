@@ -36,7 +36,9 @@ public class EntityRegenEvent extends Event implements Cancellable {
 	private final Entity entity;
 
 	/**
+	 * Constructor for an Entity regen event.
 	 * 
+	 * @param entity	the Entity that was destroyed.
 	 */
 	public EntityRegenEvent(Entity entity) {
 
